@@ -1,5 +1,5 @@
 const siteContent = {
-  "nav": {
+  "nav": { 
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
@@ -37,6 +37,74 @@ const siteContent = {
   },
 };
 
+// Images
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let header = document.getElementById("cta-img");
+header.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// NAV
+
+let navigation = document.querySelectorAll("a");
+for(let i = 0; i < navigation.length; i++){
+  navigation[i].textContent = siteContent["nav"]["nav-item-"+(i+1)];
+  navigation[i].style.color = "green";
+}
+
+// Task 3 - New Nav Items
+
+const nav = document.querySelector("nav");
+
+const before = document.createElement("a");
+before.href = "#";
+before.textContent = "Start";
+before.style.color = "green";
+nav.prepend(before);
+
+const after = document.createElement("a");
+after.href = "#";
+after.textContent = "End";
+after.style.color = "green";
+nav.appendChild(after);
+
+// CTA 
+
+let ctaLeft = document.querySelector(".cta .cta-text h1");
+ctaLeft.innerHTML ="DOM <br> IS<br>AWESOME"; 
+document.querySelector(".cta .cta-text button").textContent = siteContent["cta"]["button"];
+
+
+// Content
+let h4 = document.querySelectorAll("h4");
+let p = document.querySelectorAll("p");
+
+//  Above Image
+
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+
+// Below Image
+
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Footer 
+
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+p[5].textContent = siteContent["contact"]["address"];
+p[6].textContent = siteContent["contact"]["phone"];
+p[7].textContent = siteContent["contact"]["email"];
+p[8].textContent = siteContent["footer"]["copyright"];
