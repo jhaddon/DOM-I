@@ -10,7 +10,7 @@ const siteContent = {
   },
   "cta": {
     "h1": "DOM Is Awesome",
-    "button": "Get Started",
+    "button": "Change Color", // modified for stretch
     "img-src": "img/header-img.png"
   },
   "main-content": {
@@ -113,3 +113,11 @@ p[8].textContent = siteContent["footer"]["copyright"];
 // Update Style in any way
 
 document.body.style.backgroundColor = "lightgray";
+
+// Stretch Goal Two
+// Modify Page With Button Click
+
+let changeBG = document.querySelector('button');
+changeBG.addEventListener('click', (event) => {
+  document.body.style.backgroundColor = "white"
+})
