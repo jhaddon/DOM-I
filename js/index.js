@@ -108,3 +108,8 @@ p[5].textContent = siteContent["contact"]["address"];
 p[6].textContent = siteContent["contact"]["phone"];
 p[7].textContent = siteContent["contact"]["email"];
 p[8].textContent = siteContent["footer"]["copyright"];
+
+// Stretch Goal One
+// Update Style in any way
+
+document.body.style.backgroundColor = "lightgray";
